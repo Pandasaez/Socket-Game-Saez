@@ -39,7 +39,7 @@ def play_game(conn, addr):
 
     while True:
         # Send instructions to the client
-        conn.send("Choose difficulty (easy/medium/hard), type 'quit' to exit, or 'leaderboard' to view leaderboard: ".encode())
+        conn.send("Choose difficulty (easy/medium/hard), type 'quit' to exit, type 'retry' to retry game, or 'leaderboard' to view leaderboard: ".encode())
         user_input = conn.recv(1024).decode()
 
         if user_input.lower() == 'quit':
